@@ -201,6 +201,13 @@ p {
 .nav-logo img {
   height: 100%;
   width: auto;
+  max-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .nav-logo img {
+    max-width: 140px;
+  }
 }
 
 .nav-links {
