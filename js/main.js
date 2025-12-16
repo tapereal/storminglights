@@ -351,43 +351,8 @@ function initSmoothScroll() {
    Contact Form
    ======================================== */
 function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Get form values
-    const formData = new FormData(form);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    // Basic validation
-    if (!name || !email || !message) {
-      showFormMessage('Please fill in all fields.', 'error');
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      showFormMessage('Please enter a valid email address.', 'error');
-      return;
-    }
-
-    // Simulate form submission
-    const submitBtn = form.querySelector('.form-submit');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    // In a real implementation, you would send to a backend
-    setTimeout(() => {
-      showFormMessage('Thank you! We\'ll be in touch soon.', 'success');
-      form.reset();
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }, 1500);
-  });
+  // Contact form is handled by Formspree - no JS needed
+  // Form submits via native HTML form POST to formspree.io
 }
 
 function isValidEmail(email) {
