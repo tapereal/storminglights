@@ -201,13 +201,7 @@ p {
 .nav-logo img {
   height: 100%;
   width: auto;
-  max-width: 200px;
-}
-
-@media (max-width: 480px) {
-  .nav-logo img {
-    max-width: 140px;
-  }
+  object-fit: contain;
 }
 
 .nav-links {
@@ -1062,5 +1056,7 @@ p {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
-}/* Cache bust Mon Dec 15 21:09:28 EST 2025 */
+}
+
+/* Cache bust Mon Dec 15 21:09:28 EST 2025 */
 /* v2 */
